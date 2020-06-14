@@ -1,0 +1,28 @@
+<view class="search">
+  <search></search>
+</view>
+<!-- 滚动内容区域 -->
+<view class="cate_all">
+  <!-- 左侧 -->
+    <scroll-view scroll-y class="cate_left" >
+      <view wx:for='{{leftMenu}}' wx:key='*this' class="cate_item {{index===currentIndex?'active':''}}"
+      bindtap="handleTap" data-index="{{index}}">{{item}}</view>
+    </scroll-view>
+  <!-- 右侧 -->
+    <scroll-view scroll-y class="cate_right" scroll-top='{{scrollTop}}'>
+      <!-- 二级标题 -->
+      <view wx:for='{{rightContent}}' wx:key='index'>
+        <view class="cate_title">/{{item.cat_name}}/</view>
+        <!-- 图片区域 -->
+        <view class="cate_img">
+          <navigator 
+          wx:for='{{item.children}}'  
+          wx:key='cat_id' 
+          url="/pages/goods_list/index?cid={{item.cat_id}}">
+              <image src="{{item.cat_icon}}" mode="widthFix"></image>
+              <view class="goods_name">{{item.cat_name}}</view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+</view>

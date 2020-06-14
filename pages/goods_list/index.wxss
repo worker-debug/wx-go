@@ -1,0 +1,26 @@
+.list_eve {
+  display: flex;
+}
+.list_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin: 40rpx 0 30rpx 40rpx;
+}
+.list_price {
+  color: var(--themeColor);
+  margin: 0 0 0 40rpx;
+}
+.list_img {
+  width: 200rpx;
+  /* height: 100px; */
+  /* background-color: blue; */
+}
+.list_img image{
+  width: 100%;
+}
+.list_dec {
+  flex: 1;
+  /* height: 100px; */
+}

@@ -1,0 +1,4 @@
+<!--  收货地址 -->
+<view class="adress">
+  <button type="primary" bindtap="addAdress">添加收货地址</button>
+</view>

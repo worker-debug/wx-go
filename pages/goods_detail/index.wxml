@@ -1,0 +1,44 @@
+<view class='detail_swiper'>
+  <swiper autoplay circular indicator-dots>
+    <swiper-item wx:for='{{goodsDetail.pics}}' wx:key='pics_id'>
+      <image src="{{item.pics_mid}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="detail_price">¥{{goodsDetail.goods_price}}</view>
+<view class="det_row">
+  <view class="det_title">{{goodsDetail.goods_name}}</view>
+  <view class="det_shoucang">
+    <text class="iconfont icon-shoucang"></text>
+    <view>收藏</view>
+  </view>
+</view>
+
+<view class="detail">图文详情</view>
+<view>
+  <rich-text nodes='{{goodsDetail.goods_introduce}}'></rich-text>
+</view>
+<view class="btn_tool">
+  <view class="tool_item">
+    <view class="iconfont icon-kefu"></view>
+    <view>客服</view>
+    <button open-type="contact" size="mini"></button>
+  </view>
+  <view class="tool_item">
+    <view class="iconfont icon-fenxiang"></view>
+    <view>分享</view>
+    <button open-type="share" size="mini"></button>
+  </view>
+  <navigator class="tool_item" url="/pages/cart/index" open-type="switchTab">
+    <view class="iconfont icon-gouwuchekong"></view>
+    <view>购物车</view>
+  </navigator>
+  <view class="tool_btn">
+    <view bindtap="addCart">加入购物车</view>
+  </view>
+  <view class="tool_buy">
+    <view bindtap="buy">立即购买</view>
+  </view>
+</view>
+    
+
